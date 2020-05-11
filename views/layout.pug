@@ -1,0 +1,35 @@
+doctype html
+html
+    head
+        title Knowledgebase
+        link(rel='stylesheet', href='/bower_components/bootstrap/dist/css/bootstrap.css')
+        link(rel='stylesheet', href='/css/style.css')
+    body
+
+        nav.navbar.navbar-expand-md.bg-dark.navbar-dark
+            a.navbar-brand.text-white-50(href='#') KnowlegeBase
+            button.navbar-toggler(type='button', data-toggle='collapse', data-target='#collapsibleNavbar')
+                span.navbar-toggler-icon
+            #collapsibleNavbar.collapse.navbar-collapse
+                ul.navbar-nav
+                    li.nav-item
+                        a.nav-link(href='/') Home
+                    li.nav-item
+                        a.nav-link(href='/articles/add') Add Article
+
+        br
+        .container
+            != messages('message', locals)
+            if errors
+                each error, i in errors
+                    div(class="alert alert-danger") #{error.msg}
+            block content
+            br
+            hr
+            footer
+                p Copyright &copy; 2020
+
+
+    script(src="/bower_components/jquery/dist/jquery.js")
+    script(src="/bower_components/bootstrap/dist/js/bootstrap.js")
+    script(src="/js/main.js")
