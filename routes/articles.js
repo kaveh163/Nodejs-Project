@@ -22,7 +22,7 @@ router.post('/add', [
 ] , function (req, res) {
 
     let errors = validationResult(req);
-    console.log(errors);
+    // console.log(errors);
     //get Errors
     // let errors= req.validationErrors();
     if(!errors.isEmpty()){
