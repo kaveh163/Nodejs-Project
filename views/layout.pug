@@ -14,8 +14,9 @@ html
                 ul.navbar-nav
                     li.nav-item
                         a.nav-link(href='/') Home
-                    li.nav-item
-                        a.nav-link(href='/articles/add') Add Article
+                    if user
+                        li.nav-item
+                            a.nav-link(href='/articles/add') Add Article
                 ul.navbar-nav.ml-auto
                     if user
                         li.nav-item

@@ -54,24 +54,7 @@ app.use(function (req, res, next) {
     next();
 });
 
-// Express Validator Middleware
-// app.use(expressValidator({
-//     errorFormatter: function (param, msg, value) {
-//         var namespace = param.split('.')
-//             , root = namespace.shift()
-//             , formParam = root;
-//         while (namespace.length) {
-//             formParam += '[' + namespace.shift() + ']';
-//         }
-//         return {
-//             param: formParam,
-//             msg: msg,
-//             value: value
-//         }
-//     }
-//
-// }))
-// ;
+
 
 //Passport Config
 require('./config/passport')(passport);
@@ -97,26 +80,7 @@ app.get('/', function (req, res) {
         }
 
     });
-    // let articles = [
-    //     {
-    //         id:1,
-    //         title:'Article One',
-    //         author:'Kaveh Frounchi',
-    //         body: 'this is article one'
-    //     },
-    //     {
-    //         id:2,
-    //         title:'Article Two',
-    //         author:'Turaj Armin',
-    //         body: 'this is article two'
-    //     },
-    //     {
-    //         id:3,
-    //         title:'Article Three',
-    //         author:'Kaveh Frounchi',
-    //         body: 'this is article three'
-    //     }
-    // ];
+
 
 });
 
